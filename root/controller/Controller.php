@@ -12,21 +12,32 @@ class Controller {
       
      public function invoke()  
      {  
-        $socks = $this->model->getItemList();
-        include 'view/Lonelysocks.phtml' ;
-          /*if (!isset($_GET['book']))  
+        
+          if (!isset($_GET['page']))  
           {  
                // no special book is requested, we'll show a list of all available books  
-               $books = $this->model->getBookList();  
-               include 'view/booklist.php'; 
+               $socks = $this->model->getItemList();
+                include 'view/Lonelysocks.phtml' ; 
           } 
           else 
           { 
-               // show the requested book 
-               $book = $this->model->getBook($_GET['book']); 
-               include 'view/viewbook.php';  
-          } */ 
+            $page = $_GET['page'];
+            switch($page){
+              case('home'):
+                $socks = $this->model->getItemList();
+                include 'view/Lonelysocks.phtml' ;
+                break; 
+              case('login'):
+                include 'view/Login.phtml';
+                break;
+              case ('warenkorb'):
+                include 'view/warenkorb.phtml';
+                break;
+            }
+                
+          } 
      }  
 }  
-
+/*$book = $this->model->getBook($_GET['book']); 
+               include 'view/viewbook.php'; */
 ?>

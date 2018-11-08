@@ -55,53 +55,56 @@
                    </button>
                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                      <div class="navbar-nav">
-                       <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                       <a class="nav-item nav-link" href="#">Login</a>
-                       <a class="nav-item nav-link" href="#">Warenkorb</a>
+                       <a class="nav-item nav-link" href="index.php?page=home">Home <span class="sr-only">(current)</span></a>
+                       <a class="nav-item nav-link" href="index.php?page=login">Login</a>
+                       <a class="nav-item nav-link" href="index.php?page=warenkorb">Warenkorb</a>
                      </div>
                    </div>
                  </nav>               
         </header>
 
 <body> 
-<form>
+<form action="controller/Register.php" method="POST">
         <div class="container">
 
                 <div class="row" style="background: lightseagreen">
                     <div class="col-md-6">  
-                        Name: <br>
-                        <input type="text"> 
+                        Vorame: <br>
+                        <input type="text" name="vname"> 
                     </div>
                     <div class="col-md-6">  
                         Nachname:<br>
-                        <input type="text"> 
+                        <input type="text" name="nname"> 
                     </div>
                     <div class="col-md-6"> 
                         Straße & Hausnummer:<br>
-                        <input type="text"> 
+                        <input type="text" name="str_nr"> 
                     </div>
                     <div class="col-md-6"> 
                         PLZ: <br>
-                        <input type="text"> 
+                        <input type="text" name="plz"> 
                     </div>
                     <div class="col-md-6"> 
                         Ort: <br>
-                        <input type="text">
+                        <input type="text" name="ort">
                      </div>
                     <div class="col-md-6"> 
                         E-Mail:<br>
-                        <input type="text"> 
+                        <input type="text" name="mail"> 
                     </div>
                     <div class="col-md-6"> 
                         Passwort: (mind. 8 Zeichen) <br>
-                        <input type="text"> 
+                        <input type="text" name="pass"> 
                     </div>
                     <div class="col-md-6"> 
-                     <br>   <button> Speichern </button>
+                     <br>   <button type="submit" name="submit"> Speichern </button>
                     </div>
                 </div>
                
         </div>
 </form>
+
+<footer style="background:lightgrey"> <a href="#"> Impressum </a> </footer>
+
 
 </body>

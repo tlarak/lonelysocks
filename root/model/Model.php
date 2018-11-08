@@ -12,15 +12,15 @@ class Model extends DBVerbindung{
         
         if($numRows > 0){
             while($row = $result->fetch_assoc()){
-                $item[] = $row;
+                $items[] = $row;
             }
-            return $item;
+            return $items;
         }
     
-    
+    } 
 
-        
-    }  
+    
+    
       
     /*public function getItem($name)  
     {  

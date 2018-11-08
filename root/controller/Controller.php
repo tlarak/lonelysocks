@@ -1,6 +1,7 @@
 <?php
 
-include_once("model/Model.php");  
+include_once ('model/Model.php');  
+
   
 class Controller {  
      public $model;   
@@ -15,7 +16,7 @@ class Controller {
         
           if (!isset($_GET['page']))  
           {  
-               // no special book is requested, we'll show a list of all available books  
+               // no special article is requested, we'll show a list of all available socks  
                $socks = $this->model->getItemList();
                 include 'view/Lonelysocks.phtml' ; 
           } 
@@ -31,12 +32,18 @@ class Controller {
                 include 'view/Login.phtml';
                 break;
               case ('warenkorb'):
-                include 'view/warenkorb.phtml';
+                include 'view/Warenkorb.phtml';
+                break;
+              case ('register'):
+                include 'view/Register.phtml';
                 break;
             }
                 
           } 
-     }  
+     } 
+     
+     
+     
 }  
 /*$book = $this->model->getBook($_GET['book']); 
                include 'view/viewbook.php'; */
